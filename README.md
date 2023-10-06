@@ -35,10 +35,10 @@ Once the plugin is activated, your content will be automatically protected. Ther
 
 ## Manual usage
 
-If u want to use this on other websites you can do it like this, add header style above ending </head> element and add footer script above ending </body> tag
+If u want to use this on other websites you can do it like this, add header style above ending &lt;/head&gt; element and add footer script above ending &lt;/body&gt; tag
 
 1. **Header style:**
-```html
+```
 <style>
     @media print {
         html, body {
@@ -63,16 +63,16 @@ If u want to use this on other websites you can do it like this, add header styl
         user-drag: none;
     }
 </style>
-html```
+```
 3. **Footer script:**
-```html
+```
 <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
     console.log("%cSTOP!", "color: red; font-size: 80px; font-weight:bolder;");
     console.log("%cThis website is protected by copyright laws!", "font-size: 20px; font-weight:bold;");
     console.log("%cCopying is strictly prohibited!", "font-size: 20px; font-weight:bold;");
  </script>
-html```
+```
 ## License
 
 This project is licensed under the [GNU General Public License v2.0 (GPL-2.0)](LICENSE).
