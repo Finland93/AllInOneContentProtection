@@ -33,7 +33,46 @@ The All in one Content Protection WordPress plugin provides robust content prote
 
 Once the plugin is activated, your content will be automatically protected. There are no additional configuration steps required. Customize the protection features according to your preferences in the plugin settings page if needed.
 
+## Manual usage
 
+If u want to use this on other websites you can do it like this, add header style above ending </head> element and add footer script above ending </body> tag
+
+1. **Header style:**
+```html
+<style>
+    @media print {
+        html, body {
+            display: none; 
+        }
+    }
+
+    p, h1, h2, h3, h4, h5, h6, img, iframe, br, li, ul, a, div {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    img, picture, a {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+    }
+</style>
+html```
+3. **Footer script:**
+```html
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    console.log("%cSTOP!", "color: red; font-size: 80px; font-weight:bolder;");
+    console.log("%cThis website is protected by copyright laws!", "font-size: 20px; font-weight:bold;");
+    console.log("%cCopying is strictly prohibited!", "font-size: 20px; font-weight:bold;");
+ </script>
+html```
 ## License
 
 This project is licensed under the [GNU General Public License v2.0 (GPL-2.0)](LICENSE).
