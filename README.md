@@ -10,7 +10,7 @@ The All in one Content Protection WordPress plugin provides robust content prote
 
 - **Selective Element Protection:** Prevent text and media elements from being selected or dragged, enhancing your website's security against content theft.
 
-- **User-Friendly:** Easy-to-use interface allows you to customize content protection settings without any coding knowledge.
+- **User-Friendly:** Easy-to-use just activate this plugin and it will add CSS + javascript automaticly to header and footer on frontend.
 
 - **Compatibility:** Compatible with most WordPress themes, ensuring seamless integration and consistent protection across your entire website.
 
