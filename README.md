@@ -76,7 +76,3 @@ If u want to use this on other websites you can do it like this, add header styl
 ## License
 
 This project is licensed under the [GNU General Public License v2.0 (GPL-2.0)](LICENSE).
-
----
-
-**Note:** Customize the installation and usage instructions based on the specific functionalities and settings of your plugin. Make sure to provide clear and concise instructions to help users understand how to install and use the plugin effectively.
