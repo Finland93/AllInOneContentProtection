@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 
-// Add custom JavaScript to the footer
+// Add Console warning + prevent right click 
 function add_custom_footer_script() {
     echo '<script>
     document.addEventListener(\'contextmenu\', event => event.preventDefault());
@@ -27,7 +27,7 @@ function add_custom_footer_script() {
 }
 add_action('wp_footer', 'add_custom_footer_script');
 
-// Add custom CSS to the head
+// Add CSS protection for selection, drag & drop, prevent printing
 function add_custom_head_css() {
     echo '<style>
     @media print {
