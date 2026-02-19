@@ -81,11 +81,35 @@ If u want to use this on other websites you can do it like this, add header styl
 3. **Footer script:**
 ```
 <script>
-    document.addEventListener('contextmenu', event => event.preventDefault());
-    console.log("%cSTOP!", "color: red; font-size: 80px; font-weight:bolder;");
-    console.log("%cThis website is protected by copyright laws!", "font-size: 20px; font-weight:bold;");
-    console.log("%cCopying is strictly prohibited!", "font-size: 20px; font-weight:bold;");
- </script>
+    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+    document.addEventListener("selectstart", (e) => e.preventDefault());
+    document.addEventListener("dragstart", (e) => e.preventDefault());
+    document.addEventListener("copy", (e) => e.preventDefault());
+    document.addEventListener("cut", (e) => e.preventDefault());
+    document.addEventListener("keydown", (e) => {
+        if (e.ctrlKey || e.metaKey) {
+            const t = e.key.toLowerCase();
+            ["c", "a", "u", "s", "p"].includes(t) && e.preventDefault();
+        }
+        ("F12" === e.key || e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(e.key.toLowerCase())) && e.preventDefault();
+    });
+    window.addEventListener("beforeprint", () => {
+        document.body.style.visibility = "hidden";
+        document.body.style.height = "0";
+        document.body.style.overflow = "hidden";
+    });
+    window.addEventListener("afterprint", () => {
+            document.body.style.visibility = "";
+            document.body.style.height = "";
+            document.body.style.overflow = "";
+        });
+    });
+    console.log("%c⚠️ STOP!", "color: red; font-size: 80px; font-weight: 900;");
+    console.log( "%cThis browser console is intended for developers only.","font-size: 20px; font-weight: bold;");
+    console.log("%cIf someone told you to copy or paste code here, it could be a scam.", "font-size: 18px;");
+    console.log("%cDo not continue unless you fully understand what you are doing.","font-size: 18px; font-weight: bold;");
+    </script>
 ```
 ## License
 
