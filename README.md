@@ -40,28 +40,42 @@ If u want to use this on other websites you can do it like this, add header styl
 1. **Header style:**
 ```
 <style>
-    @media print {
-        html, body {
-            display: none; 
+        a, article, body, div, h1, h2, h3, h4, h5, h6, li, p, section, span {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
-    }
-
-    p, h1, h2, h3, h4, h5, h6, img, iframe, br, li, ul, a, div {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    img, picture, a {
-        -webkit-user-drag: none;
-        -khtml-user-drag: none;
-        -moz-user-drag: none;
-        -o-user-drag: none;
-        user-drag: none;
-    }
+        
+        [draggable], a, img {
+            user-drag: none;
+            -webkit-user-drag: none;
+        }
+        
+        @media print {
+            *, body, html {
+                visibility: hidden !important;
+                display: none !important;
+                height: 0 !important;
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+        img {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+        }
 </style>
 ```
 3. **Footer script:**
