@@ -80,7 +80,18 @@ function add_custom_head_css() {
                 margin: 0;
             }
         }
+        img {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+        }
     </style>';
 }
 add_action('wp_head', 'add_custom_head_css');
+
 
