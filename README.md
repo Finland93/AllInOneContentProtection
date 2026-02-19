@@ -16,7 +16,7 @@ The All in one Content Protection WordPress plugin provides robust content prote
 
 ## Installation
 
-1. **Download:** [Download the plugin zip file](https://github.com/Finland93/AllInOneContentProtection/releases/tag/WordPressPlugin) from the latest release.
+1. **Download:** [Download the plugin zip file](https://github.com/Finland93/AllInOneContentProtection/releases/tag/WP-Plugin) from the latest release.
 
 2. **WordPress Dashboard:**
     - Go to your WordPress Admin Dashboard.
